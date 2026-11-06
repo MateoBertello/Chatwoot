@@ -1,0 +1,479 @@
+/* BúhoManager — Soporte técnico (sitio de prueba) */
+
+:root {
+  --color-bg: #f5f7fa;
+  --color-surface: #ffffff;
+  --color-surface-alt: #eef2f6;
+  --color-text: #1b2633;
+  --color-muted: #4a5868;
+  --color-border: #d3dbe4;
+  --color-primary: #16324f;
+  --color-primary-hover: #0e2338;
+  --color-accent: #2f6f8f;
+  --color-focus: #f2b134;
+
+  --notice-bg: #fff4d6;
+  --notice-border: #b7791f;
+  --notice-text: #4d3500;
+
+  --radius: 10px;
+  --shadow: 0 1px 2px rgba(16, 32, 48, 0.06), 0 4px 16px rgba(16, 32, 48, 0.06);
+  --max-width: 960px;
+
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+h1,
+h2 {
+  line-height: 1.2;
+  color: var(--color-primary);
+  margin: 0 0 0.75rem;
+}
+
+h1 {
+  font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+}
+
+h2 {
+  font-size: clamp(1.4rem, 3.2vw, 1.75rem);
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+a {
+  color: var(--color-accent);
+  text-underline-offset: 0.15em;
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+main:focus {
+  outline: none;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Enlace para saltar al contenido (visible solo con teclado) */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  background: var(--color-surface);
+  color: var(--color-primary);
+  font-weight: 600;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Encabezado */
+.site-header {
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.brand:hover {
+  color: #ffffff;
+}
+
+.brand-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+}
+
+.brand-text {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 0.4rem;
+  font-size: 1.125rem;
+}
+
+.brand-name {
+  font-weight: 700;
+}
+
+.brand-sub {
+  font-weight: 400;
+  color: #dbe5ef;
+}
+
+.brand-sep {
+  color: #dbe5ef;
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-list a {
+  display: inline-block;
+  padding: 0.25rem 0;
+  color: #ffffff;
+  font-size: 0.975rem;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-list a:hover {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+/* Aviso de configuración */
+.notice {
+  margin: 1.25rem 0 0;
+  padding: 1rem 1.25rem;
+  background: var(--notice-bg);
+  color: var(--notice-text);
+  border: 1px solid var(--notice-border);
+  border-left-width: 6px;
+  border-radius: var(--radius);
+}
+
+.notice p:last-child {
+  margin-bottom: 0;
+}
+
+.notice-title {
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+/* Sección principal */
+.hero {
+  padding: 2.5rem 0 3rem;
+}
+
+.hero-inner {
+  max-width: var(--max-width);
+}
+
+.eyebrow {
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.lead {
+  max-width: 40rem;
+  font-size: 1.15rem;
+  color: var(--color-muted);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.chat-status {
+  min-height: 1.6em;
+  max-width: 40rem;
+  margin: 1rem 0 0;
+  font-weight: 600;
+  color: var(--notice-text);
+}
+
+.chat-status:empty {
+  display: none;
+}
+
+.chat-status:not(:empty) {
+  padding: 0.75rem 1rem;
+  background: var(--notice-bg);
+  border: 1px solid var(--notice-border);
+  border-radius: var(--radius);
+}
+
+/* Botones */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.75rem 1.5rem;
+  font: inherit;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  border-radius: var(--radius);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-hover);
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-secondary:hover {
+  background: var(--color-surface-alt);
+  color: var(--color-primary);
+}
+
+/* Secciones */
+.section {
+  padding: 3rem 0;
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+}
+
+.section-alt {
+  background: var(--color-surface-alt);
+}
+
+.checklist {
+  margin: 0 0 1.5rem;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.checklist li {
+  position: relative;
+  padding: 0.75rem 1rem 0.75rem 2.75rem;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.checklist li::before {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  top: 1.15rem;
+  width: 0.9rem;
+  height: 0.5rem;
+  border-left: 3px solid var(--color-accent);
+  border-bottom: 3px solid var(--color-accent);
+  transform: rotate(-45deg);
+}
+
+.warning-inline {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  border-left: 4px solid var(--notice-border);
+  background: var(--notice-bg);
+  color: var(--notice-text);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+/* Preguntas frecuentes */
+.test-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--notice-text);
+  background: var(--notice-bg);
+  border: 1px solid var(--notice-border);
+  border-radius: 999px;
+}
+
+.faq {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.faq details {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.faq summary {
+  position: relative;
+  padding: 1rem 3rem 1rem 1.25rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  cursor: pointer;
+  list-style: none;
+  border-radius: var(--radius);
+}
+
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq summary::after {
+  content: "+";
+  position: absolute;
+  right: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.faq details[open] summary::after {
+  content: "−";
+}
+
+.faq-body {
+  padding: 0 1.25rem 1rem;
+  color: var(--color-muted);
+}
+
+.faq-body p {
+  margin: 0;
+}
+
+.faq-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+  margin-top: 2rem;
+}
+
+.faq-cta p {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Pie de página */
+.site-footer {
+  padding: 2rem 0 6rem; /* espacio extra para que el botón del chat no tape el texto */
+  background: var(--color-primary);
+  color: #e8eef4;
+  font-size: 0.975rem;
+}
+
+.site-footer strong {
+  color: #ffffff;
+}
+
+.footer-small {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #c3d0dd;
+}
+
+/* Pantallas grandes */
+@media (min-width: 720px) {
+  .hero {
+    padding: 4rem 0 4.5rem;
+  }
+
+  .section {
+    padding: 4rem 0;
+  }
+
+  .checklist {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .checklist li:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Celulares chicos: botones a lo ancho */
+@media (max-width: 420px) {
+  .hero-actions .btn,
+  .faq-cta .btn {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .btn {
+    transition: none;
+  }
+}

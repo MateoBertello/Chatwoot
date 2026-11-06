@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BúhoManager — Soporte técnico</title>
+  <meta name="description" content="Sitio de prueba del soporte técnico de BúhoManager con chat en vivo.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#16324f">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2316324f'/%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-size='15' font-weight='700' fill='%23fff' text-anchor='middle'%3EBM%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="chatwoot-config.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./" aria-label="BúhoManager — Soporte técnico, inicio">
+        <span class="brand-mark" aria-hidden="true">BM</span>
+        <span class="brand-text">
+          <span class="brand-name">BúhoManager</span>
+          <span class="brand-sep" aria-hidden="true">—</span>
+          <span class="brand-sub">Soporte técnico</span>
+        </span>
+      </a>
+      <nav aria-label="Secciones">
+        <ul class="nav-list">
+          <li><a href="#antes-de-escribirnos">Antes de escribirnos</a></li>
+          <li><a href="#preguntas-frecuentes">Preguntas frecuentes</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" tabindex="-1">
+    <div class="container">
+      <div id="config-notice" class="notice" role="alert" hidden>
+        <p class="notice-title" id="config-notice-title"></p>
+        <p id="config-notice-text"></p>
+      </div>
+      <noscript>
+        <div class="notice">
+          <p class="notice-title">JavaScript está desactivado</p>
+          <p>El chat en vivo necesita JavaScript. Actívalo en tu navegador para poder escribirnos.</p>
+        </div>
+      </noscript>
+    </div>
+
+    <section class="hero" aria-labelledby="titulo-principal">
+      <div class="container hero-inner">
+        <p class="eyebrow">Centro de ayuda</p>
+        <h1 id="titulo-principal">¿Tienes un problema con BúhoManager?</h1>
+        <p class="lead">
+          Escríbenos por el chat y un técnico de soporte te responderá en esta misma
+          ventana. Para ayudarte más rápido, revisa antes la lista de datos útiles.
+        </p>
+        <div class="hero-actions">
+          <button type="button" class="btn btn-primary" data-open-chat aria-describedby="chat-status">
+            Hablar con un técnico
+          </button>
+          <a class="btn btn-secondary" href="#antes-de-escribirnos">Qué datos enviar</a>
+        </div>
+        <p id="chat-status" class="chat-status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section id="antes-de-escribirnos" class="section" aria-labelledby="titulo-antes">
+      <div class="container">
+        <h2 id="titulo-antes">Antes de escribirnos</h2>
+        <p>Tener estos datos a mano nos ahorra preguntas y acelera la solución:</p>
+        <ul class="checklist">
+          <li><strong>Nombre del comercio</strong> tal como figura en BúhoManager.</li>
+          <li><strong>Sucursal</strong> o punto de venta donde ocurre el problema.</li>
+          <li><strong>Versión del sistema</strong> (la encuentras en el menú Ayuda o en la pantalla de inicio).</li>
+          <li><strong>Descripción del problema:</strong> qué intentabas hacer, qué pasó y desde cuándo.</li>
+          <li><strong>Captura de pantalla</strong> del error, si la tienes. Puedes adjuntarla en el chat.</li>
+        </ul>
+        <p class="warning-inline">
+          <strong>Importante:</strong> nunca envíes contraseñas ni datos bancarios por el chat.
+          Un técnico de BúhoManager no te los va a pedir.
+        </p>
+      </div>
+    </section>
+
+    <section id="preguntas-frecuentes" class="section section-alt" aria-labelledby="titulo-faq">
+      <div class="container">
+        <h2 id="titulo-faq">Preguntas frecuentes</h2>
+        <p class="test-badge">Contenido de prueba: estas respuestas son ejemplos genéricos.</p>
+
+        <div class="faq">
+          <details>
+            <summary>No imprime el ticket</summary>
+            <div class="faq-body">
+              <p>
+                Verifica que la impresora esté encendida, con papel y conectada. Luego revisa
+                que sea la impresora seleccionada en la configuración de BúhoManager e intenta
+                imprimir una prueba. Si sigue sin imprimir, escríbenos con el modelo de la impresora.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>No puedo iniciar sesión</summary>
+            <div class="faq-body">
+              <p>
+                Revisa que el usuario esté bien escrito y que no esté activado Bloq Mayús.
+                Si olvidaste la contraseña, pide a un administrador de tu comercio que la
+                restablezca. No compartas tu contraseña por el chat.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>El sistema está lento</summary>
+            <div class="faq-body">
+              <p>
+                Cierra los programas que no estés usando y reinicia el equipo. Si la lentitud
+                aparece solo en una sucursal, revisa la conexión a internet de ese local y cuéntanos
+                desde qué hora ocurre.
+              </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>No veo las ventas del día</summary>
+            <div class="faq-body">
+              <p>
+                Comprueba que el filtro de fecha y la sucursal seleccionada sean los correctos y
+                actualiza la pantalla. Si las ventas siguen sin aparecer, envíanos una captura de
+                pantalla del reporte.
+              </p>
+            </div>
+          </details>
+        </div>
+
+        <div class="faq-cta">
+          <p>¿No encontraste lo que buscabas?</p>
+          <button type="button" class="btn btn-primary" data-open-chat aria-describedby="chat-status">
+            Hablar con un técnico
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        <strong>Sitio de prueba.</strong> Esta página se usa para probar el chat de soporte
+        antes de ofrecerlo a clientes.
+      </p>
+      <p>
+        Por tu seguridad, <strong>no envíes contraseñas ni datos bancarios</strong>
+        (números de tarjeta, claves o códigos) por el chat.
+      </p>
+      <p class="footer-small">BúhoManager — Soporte técnico</p>
+    </div>
+  </footer>
+</body>
+</html>
