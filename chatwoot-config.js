@@ -12,7 +12,7 @@
  * acceso de la API ni la clave HMAC de validación de identidad.
  */
 const CHATWOOT_BASE_URL = "https://app.chatwoot.com";
-const CHATWOOT_WEBSITE_TOKEN = "PEGAR_TOKEN_AQUI";
+const CHATWOOT_WEBSITE_TOKEN = "Y2JPQF3k9kX8QypWXY9zUGQv";
 
 /* ------------------------------------------------------------------------
  * No hace falta modificar nada debajo de esta línea.
